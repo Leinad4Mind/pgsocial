@@ -64,7 +64,7 @@ class social_photo
 		$this->pgsocial_photos 			= $pgsocial_table_photos;
 		$this->pgsocial_pages				= $pgsocial_table_pages;
 		$this->pgsocial_wallpost		= $pgsocial_table_wallpost;
-		$this->pg_social_path 			= '/ext/pgreca/pgsocial/images/';
+		$this->pg_social_path 			= './ext/pgreca/pgsocial/images/';
 	}
 
 	/**
@@ -419,7 +419,7 @@ class social_photo
 			if ($rele)
 			{
 				
-				$photoFile = $this->pg_social_path.'upload/'.$row['photo_file'];
+				$photoFile = substr($this->pg_social_path,1).'upload/'.$row['photo_file'];
 				if (empty($photoFile))
 				{
 					$photoFile = $this->pg_social_path.'no_cover.jpg';
@@ -472,6 +472,10 @@ class social_photo
 	 */
 	public function photo_upload($where, $who, $msg, $type, $lwhere, $photo, $privacy, $itop = '')
 	{
+		if($type == 'avatar') {
+			return '';
+		}
+		
 		switch ($where)
 		{
 			case 'page':
@@ -558,7 +562,7 @@ class social_photo
 				imagewebp($image, $target_dir.$name_photo, 90);
 				unlink($target_file);
 			}
-			
+
 			return $this->photo_query($where, $who, $msg, $type, $lwhere, $name_photo, $time, $privacy, $itop);
 		}
 	}
