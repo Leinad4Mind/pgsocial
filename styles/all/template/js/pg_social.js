@@ -245,7 +245,7 @@
 
 		//LIKE POPUP PHOTO
 		$(document).on('click', "#pg_social_photo_social .pg_social_photo_likshare .post_status_like a", function() {
-			pgwall_like_action($(this).parent().attr('data-parent'));
+			pgwall_like_action($(this).parent().parent().attr('data-post'));
 		});
 
 		$(document).on('click', 'li.colum .cards ul.bubbles .bubble', function() {
@@ -570,7 +570,7 @@
 	uploadPhoto = function(msg, photo, type, where, privacy, itop) {
 		if (!privacy) privacy = 1;
 		var fdata = new FormData();
-		fdata.append('mode', 'addPhoto');
+		fdata.append('mode', 'add_photo');
 		if (msg) fdata.append('msg', $.trim(msg));
 		fdata.append('post_where', where);
 		fdata.append('profile_id', profile_id);
