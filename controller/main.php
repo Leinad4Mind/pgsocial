@@ -199,7 +199,7 @@ class main
 						return $this->social_photo->get_photo($this->request->variable('photo', ''), 1, $this->request->variable('popup', ''));
 					break;
 					case 'add_gallery':
-						return $this->social_photo->add_gallery($this->request->variable('gallery_name', ''));
+						return $this->social_photo->add_gallery($this->request->variable('gallery_name', '', true));
 					break;
 					case 'add_photo':
 						return $this->social_photo->photo_upload($this->request->variable('post_where', ''), $this->request->variable('profile_id', ''), $this->request->variable('msg', '', true), $this->request->variable('type', ''), $where, $this->request->file('photo'), $this->request->variable('privacy', ''), $this->request->variable('top', ''));
