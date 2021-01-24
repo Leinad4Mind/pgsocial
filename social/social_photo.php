@@ -64,7 +64,7 @@ class social_photo
 		$this->pgsocial_photos 			= $pgsocial_table_photos;
 		$this->pgsocial_pages				= $pgsocial_table_pages;
 		$this->pgsocial_wallpost		= $pgsocial_table_wallpost;
-		$this->pg_social_path 			= './ext/pgreca/pgsocial/images/';
+		$this->pg_social_path 			= '/ext/pgreca/pgsocial/images/';
 	}
 
 	/**
@@ -420,9 +420,9 @@ class social_photo
 			{
 				
 				$photoFile = $this->pg_social_path.'upload/'.$row['photo_file'];
-				if (!file_exists($photoFile))
+				if (empty($photoFile))
 				{
-					$photoFile = $this->pg_social_path.'/no_cover.jpg';
+					$photoFile = $this->pg_social_path.'no_cover.jpg';
 				}
 				$row['photo_file'] = $photoFile;
 				if (!$template)
@@ -497,8 +497,11 @@ class social_photo
 		{
 			$name_photo .= $imageFileType;
 		}
+
 		$check = getimagesize($photo["tmp_name"]);
-		if ($check !== false && move_uploaded_file($photo["tmp_name"], $target_file))
+		$move = move_uploaded_file($photo["tmp_name"], $target_file);
+
+		if ($check !== false && $move)
 		{
 			list($width, $height) = getimagesize($target_file);
 			$diff = $width / $photo_max;

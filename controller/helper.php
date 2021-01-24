@@ -170,7 +170,7 @@ class helper
 	public function social_cover($cover, $position = 0)
 	{
 		$return = array();
-		if ($cover == '' || !file_exists($this->pg_social_path.'upload/'.$cover))
+		if ($cover == '' || empty($this->pg_social_path.'upload/'.$cover))
 		{
 			$return['file'] = $this->pg_social_path.'no_cover.jpg';
 			$return['position'] = 0;
@@ -451,15 +451,14 @@ class helper
 	public function pgMessage($message, $type = 'status')
 	{
 		$options = 0;
+		$m = 'message';
 		$uid = $bitfield = $allow_img = $allow_flash = $allow_quote = $allow_url = $allow_bbcode = '';
-		
+
 		if ($message)
 		{
 			$allow_bbcode = $this->config['pg_social_bbcode'];
 			$allow_urls = $this->config['pg_social_url'];
 			$allow_smilies = $this->config['pg_social_smilies'];
-			$m = 'message';
-			
 			if ($type == 'chat') 
 			{
 				$allow_bbcode = $this->config['pg_social_chat_message_bbcode_enabled'];
@@ -470,7 +469,7 @@ class helper
 			generate_text_for_storage($message, $uid, $bitfield, $options, $allow_bbcode, $allow_urls, $allow_smilies, $allow_img, $allow_flash, $allow_quote, $allow_url);
 			$message = str_replace("'", '&#39;', $message);
 		}
-		
+
 		return array(
 			$m					=> $message,
 			'bbcode_bitfield'	=> $bitfield,
