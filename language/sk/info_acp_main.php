@@ -50,6 +50,7 @@ $lang = array_merge($lang, array(
 	'ACP_SOCIAL_SIDEBAR_RIGHT_FRIENDSRANDOM'	=> 'Povoliť náhodných priateľov na pravej bočnej lište',
 	'ACP_SOCIAL_SIDEBAR_RIGHT_LAST_POST'=> 'Povoliť poslednú aktivitu na pravej bočnej lište',
 	'ACP_PG_SOCIAL_CHAT'				=> 'Nastavenie četu',
+	'ACP_PG_SOCIAL_CHAT_MESSAGES'		=> 'Správach',
 	'ACP_SOCIAL_SOCIAL_CHAT_ENABLED'	=> 'Povoliť čet',
 	'ACP_PG_SOCIAL_CHAT_BBCODE_ENABLED'	=> 'Povoliť BBkódy v správach',
 	'ACP_PG_SOCIAL_CHAT_URL_ENABLED'	=> 'Povoliť URL adresy v správach',

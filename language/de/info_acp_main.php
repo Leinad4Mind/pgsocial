@@ -54,6 +54,7 @@ $lang = array_merge($lang, array(
 	'ACP_SOCIAL_SIDEBAR_RIGHT_FRIENDSRANDOM'	=> 'Aktiviere zufällige Freunde in der rechten Sidebar',
 	'ACP_SOCIAL_SIDEBAR_RIGHT_LAST_POST'=> 'Aktiviere die letzte Aktivität in der rechten Sidebar.',
 	'ACP_PG_SOCIAL_CHAT'				=> 'Chat Einstellungen',
+	'ACP_PG_SOCIAL_CHAT_MESSAGES'		=> 'Nachrichten',
 	'ACP_SOCIAL_SOCIAL_CHAT_ENABLED'	=> 'Aktiviere Chat',
 	'ACP_PG_SOCIAL_CHAT_BBCODE_ENABLED'	=> 'BBCode bei Nachrichten aktivieren',
 	'ACP_PG_SOCIAL_CHAT_URL_ENABLED'	=> 'URL bei Nachrichten aktivieren',

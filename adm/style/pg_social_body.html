@@ -100,7 +100,7 @@
 		{% endif %}
 		{% if PG_SOCIAL_PAGE_CHAT %}
 			<fieldset>
-			<legend>Messaggi</legend>
+			<legend>{{ lang('ACP_PG_SOCIAL_CHAT_MESSAGES') }}</legend>
 			<dl>
 				<dt><label for="pg_social_chat_message_bbcode_enabled">{{ lang('ACP_PG_SOCIAL_CHAT_BBCODE_ENABLED') }}</label></dt>
 				<dd><input type="radio" class="radio" id="pg_social_chat_message_bbcode_enabled" name="pg_social_chat_message_bbcode_enabled" value="1" {% if PG_SOCIAL_CHAT_MESSAGE_BBCODE_ENABLED %}checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
@@ -211,8 +211,6 @@
 				<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
 			</p>
 		</div>
-	</div><div style="display:inline-block;width:25%;vertical-align:top">
-		<iframe src="https://pgreca.it/pg_social/pg_social_iframe.php?lang={{ lang('USER_LANG') }}" width="100%" height="300px" frameborder="0" cellpadding="0"></iframe>
 	</div>
 </form>
 {% INCLUDE 'overall_footer.html' %}

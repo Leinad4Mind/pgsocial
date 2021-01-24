@@ -47,6 +47,7 @@ $lang = array_merge($lang, array(
 	'ACP_SOCIAL_SIDEBAR_RIGHT_LAST_POST'=> 'Abilita gli ultimi stati nella barra laterale a destra',
 	'ACP_PG_SOCIAL_CHAT'				=> 'Impostazioni CHAT',
 	'ACP_SOCIAL_SOCIAL_CHAT_ENABLED'	=> 'Abilita Chat',
+	'ACP_PG_SOCIAL_CHAT_MESSAGES'		=> 'Messagi',
 	'ACP_PG_SOCIAL_CHAT_BBCODE_ENABLED'	=> 'Abilita i BBCode nei messaggi',
 	'ACP_PG_SOCIAL_CHAT_URL_ENABLED'	=> 'Abilita gli URL nei messaggi',
 	'ACP_PG_SOCIAL_SETTING_SAVED'		=> 'Configurazione aggiornata.',
