@@ -2,15 +2,16 @@
     "name": "pgreca/pgsocial",
     "type": "phpbb-extension",
     "description": "Trasform your forum in a Social Network",
-    "homepage": "http://pgreca.it",
     "version": "0.6.8b",
-    "time": "2018-02-25",
+    "time": "2020-02-14",
     "license": "GPL-2.0",
     "authors": [
         {
             "name": "pgreca",
-            "email": "anpgreca@gmail.com",
-            "homepage": "http://pgreca.it",
+            "role": "Original Developer"
+        },
+        {
+            "name": "Leinad4Mind",
             "role": "Developer"
         }
     ],

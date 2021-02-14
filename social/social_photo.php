@@ -562,8 +562,7 @@ class social_photo
 				imagewebp($image, $target_dir.$name_photo, 90);
 				unlink($target_file);
 			}
-
-			return $this->photo_query($where, $who, $msg, $type, $lwhere, $name_photo, $time, $privacy, $itop);
+		return $this->photo_query($where, $who, $msg, $type, $lwhere, $name_photo, $time, $privacy, $itop);
 		}
 	}
 
